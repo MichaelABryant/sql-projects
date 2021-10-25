@@ -49,4 +49,24 @@ VALUES (14, 'Essays and Aphorisms', 'Schopenhauer, Arthur', 5, 'German', 1859, '
 INSERT INTO store
 VALUES (15, 'Either/Or: A Fragment of Life', 'Kierkegaard, Soren', 10, 'Dutch', 1843, 'CE', 'Fine');
 
-SELECT * FROM store
+-- -- Queries
+
+-- Show all
+SELECT *
+FROM store
+
+-- Show all ordered by descending price
+SELECT *
+FROM store
+ORDER BY price DESC
+
+-- Show average book price made after 1800
+SELECT AVG(price) AS AVERAGE_PRICE_AFTER_1800
+FROM store
+WHERE year_written > 1800
+
+-- Show maximum book price by language and ordered by price descending
+SELECT CAST(language AS varchar(max)) AS LANGUAGE, MAX(price) AS HIGHEST_PRICE
+FROM store
+GROUP BY CAST(language AS varchar(max))
+ORDER BY 2 DESC
