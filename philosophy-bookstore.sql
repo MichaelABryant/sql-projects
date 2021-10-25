@@ -60,7 +60,12 @@ SELECT *
 FROM store
 ORDER BY price DESC
 
--- Show average book price made after 1800
+-- Show average book price made before 1800 CE
+SELECT AVG(price) AS AVERAGE_PRICE_AFTER_1800
+FROM store
+WHERE year_written < 1800
+
+-- Show average book price made after 1800 CE
 SELECT AVG(price) AS AVERAGE_PRICE_AFTER_1800
 FROM store
 WHERE year_written > 1800
