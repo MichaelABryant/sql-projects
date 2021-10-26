@@ -1,9 +1,1 @@
 # sql-projects
-
-## philosophy-bookstore.sql
-
-I create a table containing 15 philosophy books including titles, authors, prices, languages, year written, and condition. I then perform queries to order the table by price, determine average prices before and after 1800 CE, and determine the highest book price for each language and order the result in descending order.
-
-## astronauts.sql
-
-I create a database based on a dataset from NASA containing information about all NASA astronauts. I perform multiple queries including aggregate functions (MIN, MAX, AVG, SUM), CASE/WHEN statements, ORDER BY, GROUP BY, and create a view and query the view.
